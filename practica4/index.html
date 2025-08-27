@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fffbe6;
+            color: #333;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #d32f2f 70%, #fbc02d 100%);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.7rem;
+            color: #fff !important;
+            letter-spacing: 2px;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: #388e3c !important;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            inset: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px #000;
+        }
+        .btn-cta {
+            background: linear-gradient(90deg, #d32f2f 70%, #fbc02d 100%);
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-cta:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 24px rgba(211,47,47,0.2);
+            background: linear-gradient(90deg, #388e3c 70%, #fbc02d 100%);
+        }
+        .menu-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        .menu-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(211,47,47,0.15);
+        }
+        .menu-card .btn {
+            background: #d32f2f;
+            color: #fff;
+            border-radius: 20px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .menu-card .btn:hover {
+            background: #388e3c;
+            transform: scale(1.08);
+        }
+        .promo-card {
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(251,192,45,0.09);
+            background: #fffde7;
+            transition: box-shadow 0.2s;
+        }
+        .promo-card:hover {
+            box-shadow: 0 8px 32px rgba(251,192,45,0.18);
+        }
+        .about-img {
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(56,142,60,0.12);
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            background: #222;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+        }
+        .footer a {
+            color: #fbc02d;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #d32f2f;
+        }
+        .footer .fa-brands {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: color 0.2s;
+        }
+        .footer .fa-brands:hover {
+            color: #388e3c;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">🍕 PizzaNova</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content py-5">
+        <h1 class="hero-title mb-4">¡La mejor pizza artesanal de la ciudad!</h1>
+        <a href="#menu" class="btn btn-cta shadow-lg">Ordena ahora</a>
+      </div>
+    </section>
+
+    <!-- Nuestro Menú -->
+    <section id="menu" class="container py-5">
+      <h2 class="text-center mb-5" style="color:#d32f2f;font-weight:bold;">Nuestro Menú</h2>
+      <div class="row g-4">
+        <!-- Pizza 1 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card menu-card h-100">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Margherita">
+            <div class="card-body">
+              <h5 class="card-title">Margherita</h5>
+              <p class="card-text">Salsa de tomate, mozzarella fresca y albahaca.</p>
+              <p class="fw-bold text-success mb-2">$8.99</p>
+              <button class="btn w-100">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza 2 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card menu-card h-100">
+            <img src="https://images.unsplash.com/photo-1548365328-8b8490c7b7b7?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Pepperoni">
+            <div class="card-body">
+              <h5 class="card-title">Pepperoni</h5>
+              <p class="card-text">Clásica con pepperoni crujiente y queso mozzarella.</p>
+              <p class="fw-bold text-success mb-2">$9.99</p>
+              <button class="btn w-100">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza 3 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card menu-card h-100">
+            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0723c6a?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cuatro Quesos">
+            <div class="card-body">
+              <h5 class="card-title">Cuatro Quesos</h5>
+              <p class="card-text">Mozzarella, parmesano, gorgonzola y ricotta.</p>
+              <p class="fw-bold text-success mb-2">$10.99</p>
+              <button class="btn w-100">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza 4 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card menu-card h-100">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Vegetariana">
+            <div class="card-body">
+              <h5 class="card-title">Vegetariana</h5>
+              <p class="card-text">Tomate, pimientos, champiñones y aceitunas.</p>
+              <p class="fw-bold text-success mb-2">$9.49</p>
+              <button class="btn w-100">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza 5 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card menu-card h-100">
+            <img src="https://images.unsplash.com/photo-1464306076886-debede6bb098?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Hawaiana">
+            <div class="card-body">
+              <h5 class="card-title">Hawaiana</h5>
+              <p class="card-text">Jamón, piña y queso mozzarella.</p>
+              <p class="fw-bold text-success mb-2">$10.49</p>
+              <button class="btn w-100">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza 6 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card menu-card h-100">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="BBQ Chicken">
+            <div class="card-body">
+              <h5 class="card-title">BBQ Chicken</h5>
+              <p class="card-text">Pollo a la BBQ, cebolla y cilantro fresco.</p>
+              <p class="fw-bold text-success mb-2">$11.49</p>
+              <button class="btn w-100">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promociones -->
+    <section id="promociones" class="container py-5">
+      <h2 class="text-center mb-5" style="color:#fbc02d;font-weight:bold;">Promociones Destacadas</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="promo-card p-4 h-100 text-center">
+            <h5 class="mb-3" style="color:#d32f2f;">2x1 en Margherita</h5>
+            <p>Todos los lunes, disfruta el doble por el mismo precio.</p>
+            <span class="badge bg-success">Lunes</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="promo-card p-4 h-100 text-center">
+            <h5 class="mb-3" style="color:#388e3c;">Pizza Familiar + Bebida</h5>
+            <p>Combo especial por solo $15.99. ¡Ideal para compartir!</p>
+            <span class="badge bg-warning text-dark">Toda la semana</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="promo-card p-4 h-100 text-center">
+            <h5 class="mb-3" style="color:#fbc02d;">Descuento Estudiantes</h5>
+            <p>Presenta tu credencial y obtén 15% de descuento.</p>
+            <span class="badge bg-primary">Estudiantes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 style="color:#388e3c;font-weight:bold;">Nosotros</h2>
+          <p>
+            PizzaNova nació en 2010 con la pasión de compartir la auténtica pizza artesanal italiana. 
+            Usamos ingredientes frescos y recetas tradicionales, creando un ambiente cálido y familiar. 
+            ¡Ven y descubre por qué somos la pizza favorita de la ciudad!
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Historia PizzaNova" class="about-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container py-5">
+      <h2 class="text-center mb-5" style="color:#d32f2f;font-weight:bold;">Contacto</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-cta w-100">Enviar</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9 rounded shadow">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.054234263687!2d2.154007315422989!3d41.39020597926395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f7e6c2b1b1%3A0x7e7e7e7e7e7e7e7e!2sLa%20Pizza!5e0!3m2!1ses!2ses!4v1680000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <h5 class="mb-3">Links rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#menu">Menú</a></li>
+              <li><a href="#promociones">Promociones</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Horarios de atención</h5>
+            <ul class="list-unstyled">
+              <li>Lunes a Viernes: 12:00 - 23:00</li>
+              <li>Sábado y Domingo: 13:00 - 00:00</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Síguenos</h5>
+            <a href="#" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="me-2"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="me-2"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <hr class="my-4" style="border-color:#444;">
+        <div class="text-center small">
+          &copy; 2024 PizzaNova. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script></div></ul></button>
+</body>
+</html>
