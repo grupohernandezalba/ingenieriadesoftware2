@@ -1,0 +1,92 @@
+[
+    {
+        "nombre" : "Jeizarath",
+        "apellidos" : "Aguirre Ramírez",
+        "participaciones" : 1,
+        "practicas" : 1,
+        "asistencias" : 2,
+        "foto" : "imagenes/shu.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Alexis Tadeo",
+        "apellidos" : "Castellanos Aranda",
+        "participaciones" : 1,
+        "practicas" : 0,
+        "asistencias" : 1,
+        "foto" : "imagenes/chicks.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Gabriel Antoine",
+        "apellidos" : "Fuentes Martín del Campo",
+        "participaciones" : 1,
+        "practicas" : 1,
+        "asistencias" : 2,
+        "foto" : "imagenes/francesco.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Aarón",
+        "apellidos" : "Juárez Villasana",
+        "participaciones" : 1,
+        "practicas" : 1,
+        "asistencias" : 2,
+        "foto" : "imagenes/elrey.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Axel Xavier",
+        "apellidos" : "Morales Ramírez",
+        "participaciones" : 1,
+        "practicas" : 0,
+        "asistencias" : 2,
+        "foto" : "imagenes/lewis.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Abraham Isaí",
+        "apellidos" : "Navarro Hidalgo",
+        "participaciones" : 1,
+        "practicas" : 1,
+        "asistencias" : 2,
+        "foto" : "imagenes/sargento.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Pedro Eder",
+        "apellidos" : "Pacheco Mota",
+        "participaciones" : 1,
+        "practicas" : 0,
+        "asistencias" : 1,
+        "foto" : "imagenes/fillmore.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Axel Gabriel",
+        "apellidos" : "Quiñones Martínez",
+        "participaciones" : 1,
+        "practicas" : 1,
+        "asistencias" : 2,
+        "foto" : "imagenes/mate.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Danna Ilse",
+        "apellidos" : "Rodríguez Padilla",
+        "participaciones" : 1,
+        "practicas" : 1,
+        "asistencias" : 2,
+        "foto" : "imagenes/sally.webp",
+        "equipo" : "NA"
+    },
+    {
+        "nombre" : "Orlando",
+        "apellidos" : "Zambrano Medina",
+        "participaciones" : 1,
+        "practicas" : 2,
+        "asistencias" : 2,
+        "foto" : "imagenes/hudson.webp",
+        "equipo" : "NA"
+    }
+]

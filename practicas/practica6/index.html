@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica6</title>
+</head>
+<body>
+    <h1>Vamos a programar en JS</h1>
+
+    <script>
+
+        var miVariable2 = 50; // var es una variable global, poco usada
+        let miVariable = 'Hola Mundo';
+        let miVariable2 = "Hola Mundo2";
+        console.log(miVariable);
+        console.log(miVariable2);
+        let numero1 = 5;
+        let numero2 = 10;
+        let suma = numero1 + numero2;
+        console.log('La suma es:',suma);
+
+        let multiplicacion = numero1 * numero2;
+        console.log('La multiplicacion es:',multiplicacion);
+
+        let division = numero2 / numero1;
+        console.log('La division es:',division);
+
+        const PI = 3.1416;
+        //PI = 4.2; // Esto da error porque PI es una constante
+        console.log('el valor de PI es:',PI);
+
+        let area = PI * (numero1 * numero2);
+        console.log('El area es:',area.toFixed(4));
+
+        let esCasado = false;
+        console.log('Orlando es casado:',esCasado);
+        esCasado = true;
+        console.log('Xavier es casado:',esCasado,'y tiene 7 hijos');
+        
+        let miArreglo = ['Manzana','Pera','Uva'];
+        console.log(miArreglo);
+        console.log(miArreglo[2]);
+        console.log(miArreglo[3]);
+        console.log(miArreglo[-1]);
+        miArreglo[3] = 'Mango';
+        miArreglo[5] = 'Coco';
+        console.log(miArreglo);
+        console.log(miArreglo[4]);
+
+        let otroArreglo = new Array('Rojo',500,true);
+        console.log(otroArreglo);
+
+        let persona = {
+            nombre : 'Orlando',
+            apellido : 'Rojas',
+            edad : 30,
+            esCasado : false,
+        }
+        console.log(persona);
+
+      
+    </script>
+
+    
+</body>
+</html>
