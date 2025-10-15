@@ -2,7 +2,7 @@
 let listaEmpleados = document.getElementById("listaEmpleados");
 
 function obtenerEmpleados() {
-    fetch('https://gha.mx/practica13/datos/empleados.json', {
+    fetch('https://grupohernandezalba.github.io/ingenieriadesoftware2/practica13/datos/empleados.json', {
       mode: 'cors',
       headers: {
         'Access-Control-Allow-Origin': '*'
